@@ -212,15 +212,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="layout.cd" />
-    <None Include="preBuildBaldiniControlsCalendar.bat" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>If "$(ConfigurationName)" == "Production" (
-"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\tf.exe" checkout "$(ProjectDir)Properties\AssemblyInfo.cs"
-"\\north3\data\programming\build utilities\IncrementVersionNumber.exe" "$(ProjectDir)Properties\AssemblyInfo.cs"
-"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\tf.exe" checkin "$(ProjectDir)Properties\AssemblyInfo.cs" /comment:"Automated checkin by IncrementVersionNumber" /noprompt
-)</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
