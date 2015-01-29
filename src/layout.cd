@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="Baldini.Controls.Calendar.Calendar" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Internal" Collapsed="true" />
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Baldini.Controls.Calendar.Calendar.CalendarState">
+        <TypeIdentifier>
+          <NewMemberFileName>Calendar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="Baldini.Controls.Calendar.Calendar.CalendarLoadEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Calendar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Baldini.Controls.Calendar.Calendar.CalendarItemEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Calendar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Baldini.Controls.Calendar.Calendar.CalendarItemCancelEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Calendar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Baldini.Controls.Calendar.Calendar.CalendarDayEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Calendar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Baldini.Controls.Calendar.Calendar.CalendarEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\Calendar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Baldini.Controls.Calendar.Calendar.MouseWheelEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\Calendar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Baldini.Controls.Calendar.Calendar.OpenItemExternalEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\Calendar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CoDgNFRGPlLivomkzBLLL8jiUHcq2KMneZvCdB0DGcs=</HashCode>
+      <FileName>Controls\Calendar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.CalendarDay">
+    <Position X="4.5" Y="4.25" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAEAgBAIBAiGABEJgAhACCEAAIwIAABEAUAWASUmkQ=</HashCode>
+      <FileName>Classes\CalendarDay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.CalendarDayAvailability" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CalendarDay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.CalendarDayTop">
+    <Position X="8" Y="4.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAMAAAAAAAAAEAAAAAAAQAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CalendarDay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.CalendarItem">
+    <Position X="0.5" Y="4.25" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IQBCEQDkYpgq8M6EIhCQIEAyKxL4QTAJAEAQiESHQYA=</HashCode>
+      <FileName>Classes\CalendarItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.CalendarItemCollection" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACIAAEAAAAAAAAAAAAAAhAAAAAAAAAAEKAAAEIBEAAA=</HashCode>
+      <FileName>Classes\CalendarItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.CalendarSelectableElement">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAIQABAAAAAAAAAAAAAEFAIAAEAAAAgI=</HashCode>
+      <FileName>Classes\CalendarSelectableElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.MonthView" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Baldini.Controls.Calendar.MonthView.MonthViewSelection">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\MonthView.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>NDbtKMADAo7OPxTAYlWgZIowmBYgKCpHoCIIRYADJCE=</HashCode>
+      <FileName>Controls\MonthView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.MonthViewDay" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAACAAAAAAIAABAAAAAEAAAAAAAANBAgAAAAAAgI=</HashCode>
+      <FileName>Classes\MonthViewDay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baldini.Controls.Calendar.MonthViewMonth" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEABACAAAAAgAAABAIAAAAAAAAgAAAhQKAAAEZAAgA=</HashCode>
+      <FileName>Classes\MonthViewMonth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Baldini.Controls.Calendar.ISelectableElement">
+    <Position X="9.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgI=</HashCode>
+      <FileName>Classes\ISelectableElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Baldini.Controls.Calendar.ICalendarSelectableElement">
+    <Position X="9.25" Y="9.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\ICalendarSelectableElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
