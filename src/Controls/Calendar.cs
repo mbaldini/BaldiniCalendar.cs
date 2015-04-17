@@ -246,7 +246,7 @@ namespace Baldini.Controls.Calendar
         #endregion
 
         #region Variables
-        //private string DRAGDROP_FORMAT = "Baldini.Controls.Calendar.CalendarItem";
+        private string DRAGDROP_FORMAT = "Baldini.Controls.Calendar.CalendarItem";
         internal CalendarItem HoverItem;
         public delegate void MouseWheelEventHandler(object sender, EventArgs e);
         public delegate void OpenItemExternalEventHandler(object sender, CalendarItemEventArgs e);
@@ -280,18 +280,7 @@ namespace Baldini.Controls.Calendar
         private CalendarTimeScale _timeScale;
         private int _timeUnitsOffset;
         private DateTime _viewEnd;
-        private DateTime __viewStart;
-        private DateTime _viewStart
-        {
-            get
-            {
-                return __viewStart;
-            }
-            set
-            {
-                __viewStart = value;
-            }
-        }
+        private DateTime _viewStart;
         private CalendarWeek[] _weeks;
         private List<CalendarSelectableElement> _selectedElements;
         private ICalendarSelectableElement _selectedElementEnd;
@@ -306,7 +295,9 @@ namespace Baldini.Controls.Calendar
         private bool showImageOnReminders = true;
         private bool showImageOnAppointments = false;
         private bool showRemindersAsAllDay = true;
+        private MonthView monthView = null;
 
+        private EventHandler MonthViewUpdatedEventHandler;
         private ListChangedEventHandler DatasetChanged;
         //private EventHandler BindingCurrentChanged;
 
@@ -340,6 +331,7 @@ namespace Baldini.Controls.Calendar
             Holidays = new CalendarHolidayCollection();
 
             HighlightRanges = new CalendarHighlightRange[] { };
+            // Sample datas
             //    new CalendarHighlightRange( DayOfWeek.Monday, new TimeSpan(8,0,0), new TimeSpan(17,0,0)),
             //    new CalendarHighlightRange( DayOfWeek.Tuesday, new TimeSpan(8,0,0), new TimeSpan(17,0,0)),
             //    new CalendarHighlightRange( DayOfWeek.Wednesday, new TimeSpan(8,0,0), new TimeSpan(17,0,0)),
@@ -608,7 +600,37 @@ namespace Baldini.Controls.Calendar
         }
 
         /// <summary>
-        /// Gets or sets theCalendarRenderer of theCalendar
+        /// Gets or sets the MonthView item that controls the View Range of this control
+        /// </summary>
+        [DefaultValue(null)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public MonthView MonthView 
+        {
+            get { return monthView; }
+            set 
+            {
+                if (monthView != value)
+                {
+                    // Setup the event handler if it is not initialized
+                    if (MonthViewUpdatedEventHandler == null)
+                        MonthViewUpdatedEventHandler = new EventHandler(UpdateDateRangeFromMonthView);
+                    
+                    // if the source variable for this property has a value, be sure to remove the event handler
+                    if (monthView != null)
+                        monthView.SelectionChanged -= MonthViewUpdatedEventHandler;
+
+                    // update the source variable to the set value
+                    monthView = value;
+
+                    // if the source variable has a value, be sure to add the event handler to the proper event on the monthView
+                    if (monthView != null)
+                        monthView.SelectionChanged += MonthViewUpdatedEventHandler;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the CalendarRenderer of the Calendar
         /// </summary>
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public CalendarRenderer Renderer
@@ -1736,6 +1758,17 @@ namespace Baldini.Controls.Calendar
 
             UpdateHighlights();
 
+        }
+
+        /// <summary>
+        /// Updates the View Range of this control to use the SelectionBegin and SelectionEnd properties
+        /// of the provided MonthView control.
+        /// </summary>
+        /// <param name="sender">the MonthView Control that raised the SelectionChanged event</param>
+        /// <param name="e">Event Args</param>
+        private void UpdateDateRangeFromMonthView(object sender, EventArgs e)
+        {
+            this.SetViewRange((sender as MonthView).SelectionStart, (sender as MonthView).SelectionEnd);
         }
 
         /// <summary>
